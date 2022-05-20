@@ -1,0 +1,63 @@
+@import 'links';
+
+:is(h2, h3, h4, h5, h6):not(:first-child) {
+    margin-top: 3rem;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--horizontal-line-color);
+    padding: 0 0.5rem;
+}
+
+
+h1 {
+    color: var(--header-1-color);
+    font-weight: var(--header-1-weight);
+    text-align: var(--header-1-alignment);
+    font-size: var(--header-1-size);
+}
+
+h2 {
+    color: var(--header-2-color);
+    font-weight: var(--header-2-weight);
+    text-align: var(--header-2-alignment);
+    font-size: var(--header-2-size);
+}
+
+h3 {
+    color: var(--header-3-color);
+    font-weight: var(--header-3-weight);
+    text-align: var(--header-3-alignment);
+    font-size: var(--header-3-size);
+}
+
+h4 {
+    color: var(--header-4-color);
+    font-weight: var(--header-4-weight);
+    text-align: var(--header-4-alignment);
+    font-size: var(--header-4-size);
+}
+
+h5 {
+    color: var(--header-5-color);
+    font-weight: var(--header-5-weight);
+    text-align: var(--header-5-alignment);
+    font-size: var(--header-5-size);
+}
+
+h6 {
+    color: var(--header-6-color);
+    font-weight: var(--header-6-weight);
+    text-align: var(--header-6-alignment);
+    font-size: var(--header-6-size);
+}
+
+ul {
+    padding-left: 1.25rem;
+}
+
+li {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}

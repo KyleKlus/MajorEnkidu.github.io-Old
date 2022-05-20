@@ -1,0 +1,25 @@
+<header>
+    <div class="menu-button-container">
+        <button class="menu-button" onclick="toggleMenu(); toggleButton(this)">
+            <div class="menu-button-inner"><-</div>
+        </button>
+        <p>MOC</p>
+    </div>
+    <h1>{{ page.title | default: site.title }}</h1>
+    <div class="menu-container">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/posts/recipes/etc/Cooking-Ideas.html">Cooking Ideas</a></li>
+        </ul>
+    </div>
+    <script>
+        function toggleMenu(){
+            var element = document.querySelector(".menu-container");
+            element.classList.toggle("is-visible");
+        }
+
+        function toggleButton(element){
+            element.classList.toggle("is-active");
+        }
+    </script>
+</header>

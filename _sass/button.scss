@@ -1,0 +1,30 @@
+.menu-button {
+    background-color: var(--main-accent);
+    border: 1px solid transparent;
+    border-radius: var(--radius-big);
+    box-shadow: var(--button-shadow);
+    padding: 2px;
+    transition: background-color 250ms ease-out,
+                transform 100ms ease-out;
+}
+
+.menu-button-inner {
+    transition: transform 200ms ease-out;
+}
+
+.menu-button.is-active .menu-button-inner {
+    transform: rotate(-90deg);
+    transition: transform 250ms ease-in;
+}
+
+.menu-button:hover {
+    background-color: var(--main-accent-light);
+    transform: scale(1.15);
+    transition: background-color 200ms ease-in,
+                transform 200ms ease-out;
+}
+
+.menu-button.is-active .menu-button-inner:hover {
+    transform: rotate(-90deg);
+    transition: transform 250ms ease-in;
+}
