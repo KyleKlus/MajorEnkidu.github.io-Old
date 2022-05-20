@@ -63,10 +63,8 @@ defaults:
       is_post: false
       layout: default
 
+include: [_pages]
 
-
-scss:
-    style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
