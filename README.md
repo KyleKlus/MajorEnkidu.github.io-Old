@@ -1,1 +1,0 @@
-# MajorEnkidu.github.io
