@@ -4,7 +4,7 @@ header {
     height: 79px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 12;
     position: fixed;
@@ -15,11 +15,14 @@ header {
 }
 
 header .menu-button-container {
-    position: absolute;
-    left: 1.2rem;
+    flex: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+header .menu-button-container button {
+    margin-left: 1.2rem;
 }
 
 header .menu-button-container p {
@@ -51,4 +54,12 @@ header .menu-container.is-visible {
     left: 0;
     -webkit-transition: left 250ms ease-in;
     transition: left 250ms ease-in;
+}
+
+header h1 {
+    position: relative;
+}
+
+header .search-container {
+    flex: 1;
 }
