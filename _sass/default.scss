@@ -38,3 +38,10 @@ body {
     width: calc(80%);
     max-width: 900px;
 }
+
+@media only screen and (max-width: 600px) {
+    .content {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+}
