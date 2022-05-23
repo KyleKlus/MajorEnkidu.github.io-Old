@@ -69,13 +69,25 @@ header .menu-container.is-visible {
     transition: left 250ms ease-in;
 }
 
-header .menu-container a {
+header .menu-container > a{
     text-decoration: none;
     width: 100%;
     font-size: var(--header-4-size);
-    margin-top: 0.1rem;
-    margin-bottom: 0.1rem;
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
     padding-left: 3rem;
+}
+
+header .menu-container li > a {
+    text-decoration: none;
+    width: 100%;
+    font-size: var(--header-6-size);
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+header .menu-container ul {
+    margin-left: 2rem;
 }
 
 header .menu-container a:hover {
