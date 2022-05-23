@@ -53,11 +53,40 @@ h6 {
     font-size: var(--header-6-size);
 }
 
-ul {
-    padding-left: 1.25rem;
+ul, ol {
+    padding-left: 1.9rem;
 }
 
 li {
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border-spacing: 0px;
+}
+
+thead th {
+    font-weight: bold;
+    background-color: var(--main-accent);
+}
+
+td, th {
+    padding: 2px;
+    border: 1px solid var(--horizontal-line-color);
+}
+
+td {
+    background-color: var(--bg-darker);
 }
