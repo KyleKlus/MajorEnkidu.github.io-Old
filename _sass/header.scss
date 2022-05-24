@@ -34,7 +34,7 @@ header .menu-button-container p {
 header .menu-container {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 22%;
     max-height: 100vh;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -49,17 +49,20 @@ header .menu-container {
     -webkit-transition: left 200ms ease-out;
     transition: left 200ms ease-out;
     box-shadow: var(--shadow);
-    align-items: center;
     justify-items: center;
 }
 
 @media only screen and (max-width: 600px) {
     header .menu-container{
-        width: 55%;
+        width: 60%;
     }
 
     header .menu-button-container p {
         display: none;
+    }
+
+    header h1 {
+        padding-left: 0.5rem;
     }
 }
 
@@ -71,23 +74,25 @@ header .menu-container.is-visible {
 
 header .menu-container > a{
     text-decoration: none;
-    width: 100%;
+    width: calc(100% - 2.5rem);
     font-size: var(--header-4-size);
-    margin-top: 0.35rem;
-    margin-bottom: 0.35rem;
-    padding-left: 3rem;
+    margin-top: 0.45rem;
+    margin-bottom: 0.45rem;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
 }
 
 header .menu-container li > a {
     text-decoration: none;
-    width: 100%;
-    font-size: var(--header-6-size);
-    margin-top: 0.3rem;
-    margin-bottom: 0.3rem;
+    width: calc(100% - 2.5rem);
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 
 header .menu-container ul {
-    margin-left: 2rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
 }
 
 header .menu-container a:hover {
