@@ -63,11 +63,12 @@ li {
 }
 
 li::marker {
-    color: var(--main-accent-light);
+    color: var(--main-accent);
 }
 
 strong {
     font-weight: bold;
+    color: var(--main-accent);
 }
 
 em {
