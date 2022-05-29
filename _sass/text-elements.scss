@@ -98,3 +98,9 @@ td, th {
 td {
     background-color: var(--bg-darker);
 }
+
+@media only screen and (max-width: 600px) {
+    table {
+        width: 80%;
+    }
+}
