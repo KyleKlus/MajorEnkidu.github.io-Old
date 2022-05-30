@@ -3,11 +3,11 @@
     --main-accent: hsl(0, 50%, 40%);
     --main-accent-light: hsl(0, 50%, 52%);
 
-    --conf-bg-spacing: 5%;
-    --conf-bg-start: 3%;
+    --conf-bg-spacing: 4%;
+    --conf-bg-start: 0%;
     --conf-bg-transparency: 0.85;
-    --conf-bg-hue: 228;
-    --conf-bg-sat: 12%;
+    --conf-bg-hue: 215;
+    --conf-bg-sat: 30%;
 
     --bg-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
     --bg-dark-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
