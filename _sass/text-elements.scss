@@ -1,13 +1,13 @@
 @import 'links';
 
 :is(h2, h3, h4, h5, h6):not(:first-child) {
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 
 h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
     border-bottom: 1px solid var(--horizontal-line-color);
-    padding: 0 0.5rem;
+    padding: 0.6rem 0.9rem;
 }
 
 
@@ -58,12 +58,16 @@ ul, ol {
 }
 
 li {
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
 }
 
 li::marker {
     color: var(--main-accent);
+}
+
+ul > li::marker {
+    content: var(--list-bullet-sign);
 }
 
 strong {
@@ -86,7 +90,7 @@ table {
 
 thead th {
     font-weight: bold;
-    background-color: var(--main-accent);
+    background-color: var(--main-accent-dark);
 }
 
 td, th {
@@ -97,6 +101,10 @@ td, th {
 
 td {
     background-color: var(--bg-darker);
+}
+
+td:first-child {
+    max-width: fit-content;
 }
 
 @media only screen and (max-width: 600px) {

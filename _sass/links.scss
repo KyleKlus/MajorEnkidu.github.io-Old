@@ -1,5 +1,13 @@
+a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-normal);
+    transition: all 100ms ease-out;
+}
+
 a:hover {
     color: var(--main-accent-light);
+    border-color: var(--main-accent-light);
+    transition: all 100ms ease-in;
 }
 
 a[href*='youtube.com'] {

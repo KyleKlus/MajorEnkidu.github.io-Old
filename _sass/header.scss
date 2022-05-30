@@ -71,6 +71,10 @@ header .menu-container > a {
     text-decoration: none;
     width: calc(100% - 2.5rem);
     font-size: var(--header-4-size);
+    border: none;
+    border-top-right-radius: var(--radius-small);
+    border-bottom-right-radius: var(--radius-small);
+    transition: all 200ms ease-out;
 }
 
 header .menu-container > a > img{
@@ -88,6 +92,7 @@ header .menu-container > a > p {
 header .menu-container > a:hover {
     background-color: var(--main-accent-dark);
     color: var(--main-accent-dark);
+    transition: all 200ms ease-in;
 }
 
 header h1 {
@@ -113,11 +118,13 @@ header .search-container {
     
     .menu-container:hover{
         width: 100vw;
+        transition: all 200ms ease-in;
     }
     
     header .menu-container > a > img:hover{
         border-color: var(--main-accent);
         background-color: var(--main-accent);
+        transition: all 200ms ease-in;
     }
     
     header .menu-container > a {
@@ -131,6 +138,7 @@ header .search-container {
     header .menu-container > a:hover {
         background-color: transparent;
         color: transparent;
+        transition: all 200ms ease-in;
     }
 
     header h1 {
