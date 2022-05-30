@@ -8,3 +8,10 @@ footer {
     align-items: center;
     margin-top: 40px;
 }
+
+@media only screen and (max-width: 600px) {
+    
+    footer {
+        margin-bottom: calc(32px + 1.2rem);
+    }
+}
