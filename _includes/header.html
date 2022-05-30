@@ -1,16 +1,22 @@
 <header>
-    <div class="menu-button-container">
-        <button class="menu-button" onclick="toggleMenu(); toggleButton(this)">
-            <div class="menu-button-inner"></div>
-        </button>
-        <p>MOC</p>
+    <div class="back-button-container">
+        <a class="back-button" href="{{ page.backlink | default: / }}"><-</a>
     </div>
     <h1>{{ page.title | default: site.title }}</h1>
     <div class="search-container"></div>
-    <div class="menu-container">
-        <a href="/index.html">Home</a>
-        <a href="/posts/recipes/Recipes.html">Recipes</a>
-        <a href="/posts/recipes/etc/Cooking-Ideas.html">Cooking Ideas</a>
+    <div class="menu-container is-visible">
+        <a href="/index.html">
+            <img src="https://api.iconify.design/el/home-alt.svg?color=gray&width=32&height=32" alt="Home">
+            <p class="nav-item">Home</p>
+        </a>
+        <a href="/posts/recipes/Recipes.html">
+            <img src="https://api.iconify.design/file-icons/fork.svg?color=gray&width=32&height=32" alt="Recipes">
+            <p class="nav-item">Recipes</p>
+        </a>
+        <a href="/posts/recipes/etc/Cooking-Ideas.html">
+            <img src="https://api.iconify.design/el/idea-alt.svg?color=gray&width=32&height=32" alt="Cooking Ideas">
+            <p class="nav-item">Cooking Ideas</p>
+        </a>
     </div>
     <script>
         function toggleMenu(){

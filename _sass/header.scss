@@ -14,27 +14,34 @@ header {
     box-shadow: var(--shadow);
 }
 
-header .menu-button-container {
+header .back-button-container {
     flex: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-header .menu-button-container button {
+header a.back-button {
     margin-left: 1.2rem;
+    text-decoration: none;
+    background-color: var(--main-accent);
+    border: 1px solid transparent;
+    border-radius: var(--radius-big);
+    box-shadow: var(--button-shadow);
+    padding: 2px;
+    transition: background-color 250ms ease-out;
 }
 
-header .menu-button-container p {
-    margin-top: 2px;
-    margin-left: 10px;
-    text-shadow: var(--text-shadow);
+.back-button:hover {
+    background-color: var(--main-accent-light);
+    color: var(--text-normal);
+    transition: background-color 200ms ease-in;
 }
 
-header .menu-container {
+.menu-container {
     display: flex;
     flex-direction: column;
-    width: 22%;
+    width: calc(32px + 1.2rem);
     max-height: 100vh;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -42,14 +49,50 @@ header .menu-container {
     overflow-x: hidden;
     position: fixed;
     top: 80px;
-    left: -100%;
+    left: 0;
     bottom: 0;
     z-index: 2;
     background-color: var(--bg-dark);
-    -webkit-transition: left 200ms ease-out;
-    transition: left 200ms ease-out;
+    transition: width 300ms ease-out;
     box-shadow: var(--shadow);
     justify-items: center;
+}
+
+.menu-container:hover{
+    width: 15%;
+    transition: width 300ms ease-in;
+}
+
+
+header .menu-container > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    width: calc(100% - 2.5rem);
+    font-size: var(--header-4-size);
+}
+
+header .menu-container > a > img{
+    margin: 0.6rem 0.6rem;
+}
+
+header .menu-container > a > p {
+    margin-right: 0.6rem;
+    white-space: nowrap;
+}
+
+header .menu-container > a:hover {
+    background-color: var(--main-accent-dark);
+    color: var(--main-accent-dark);
+}
+
+header h1 {
+    position: relative;
+}
+
+header .search-container {
+    flex: 1;
 }
 
 @media only screen and (max-width: 600px) {
@@ -65,46 +108,4 @@ header .menu-container {
         padding-left: 0.5rem;
         font-size: 1.35rem;
     }
-}
-
-header .menu-container.is-visible {
-    left: 0;
-    -webkit-transition: left 250ms ease-in;
-    transition: left 250ms ease-in;
-}
-
-header .menu-container > a{
-    text-decoration: none;
-    width: calc(100% - 2.5rem);
-    font-size: var(--header-4-size);
-    margin-top: 0.45rem;
-    margin-bottom: 0.45rem;
-    padding-left: 1rem;
-    padding-right: 1.5rem;
-}
-
-header .menu-container li > a {
-    text-decoration: none;
-    width: calc(100% - 2.5rem);
-    font-size: 0.9rem;
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-}
-
-header .menu-container ul {
-    margin-left: 1rem;
-    margin-right: 1.5rem;
-}
-
-header .menu-container a:hover {
-    color: var(--text-normal);
-    background-color: var(--main-accent-dark);
-}
-
-header h1 {
-    position: relative;
-}
-
-header .search-container {
-    flex: 1;
 }
