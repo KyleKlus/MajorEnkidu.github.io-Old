@@ -14,19 +14,18 @@
     --bg-darker-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
     --bg-darkest-translucent: hsla(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 0 * var(--conf-bg-spacing)), var(--conf-bg-transparency));
 
-    --bg: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 3 * var(--conf-bg-spacing)));
-    --bg-dark: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2 * var(--conf-bg-spacing)));
-    --bg-darker: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 1 * var(--conf-bg-spacing)));
-    --bg-darkest: hsl(var(--conf-bg-hue), var(--conf-bg-sat), calc(var(--conf-bg-start) + 2% + 0 * var(--conf-bg-spacing)));
+    --bg: #161c22;
+    --bg-dark: #0c1213;
+    --bg-darker: #111518;
 
     --bg-app: var(--bg);
-    
+
     --bg-title-bar: var(--bg-darkest);
     --bg-title-bar-button-hover:#232327;
 
     --bg-ribbon: var(--bg-app);
 
-    --bg-leaf-head-active: var(--bg-darkest); 
+    --bg-leaf-head-active: var(--bg-darkest);
     --bg-leaf-head: var(--bg-darker);
     --bg-leaf-content: var(--bg-dark-translucent);
 
@@ -50,7 +49,7 @@
     --header-4-color: hsl(230, 20%, 88%);
     --header-5-color: hsl(230, 20%, 88%);
     --header-6-color: hsl(230, 20%, 88%);
-    
+
     --bg-highlight-color:#afe400;
     --highlight-text-color:#000000;
     --bold-color: #2487e4;
@@ -67,7 +66,7 @@
     --bg-tag-hover: #10253f;
 
     --graph-line-color:#7a7a7a;
-    
+
     /* Overridden Obsidian Variables */
 
     --background-modifier-cover: var(--bg-app); /*Obsidian Title Bar Bg*/
@@ -75,7 +74,7 @@
     --background-primary-alt: var(--bg-darker); /*Note Title background active*/
     --background-secondary: var(--bg-darkest); /*Sidebar background*/
     --background-secondary-alt: var(--bg-leaf-head-active); /*Sidebar Title background*/
-    
+
     --text-normal: hsl(230, 20%, 92%); /*Text body of note*/
     --text-note: var(--text-normal);
     --text-muted:  ; /*Text darker for sidebar, toggles, inactive, tags, etc*/
@@ -92,7 +91,7 @@
     --interactive-hover: var(--main-accent); /*Button Hovered Color*/
     --interactive-accent: var(--main-accent); /*Workspace Note Title Underline*/
     --interactive-accent-hover: var(--main-accent-light); /*Menu Button Hover*/
-    
+
     --scrollbar-bg: #ffffff0d; /*Scrollbar Gutter Background*/
     --scrollbar-thumb-bg: #ffffff1a; /*Scrollbar Color*/
     --scrollbar-active-thumb-bg: var(--main-accent-dark); /*Scrollbar Dragged Color*/
