@@ -27,6 +27,7 @@ title: Kyle Klus
             overflow: hidden;
             border-radius: 50%;
             box-shadow: var(--shadow);
+border: 1px solid var(--main-accent-dark);
         }
         img.rounded{
             display: inline;
