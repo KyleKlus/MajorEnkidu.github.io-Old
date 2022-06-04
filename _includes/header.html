@@ -1,6 +1,8 @@
 <header>
     <div class="back-button-container">
-        <a class="back-button" href="{{ page.backlink | default: / }}"><-</a>
+        <button class="back-button" onclick="location.href = '{{ page.backlink | default: / }}'">
+            <-
+        </button>
     </div>
     <h1>{{ page.title | default: site.title }}</h1>
     <div class="search-container"></div>
@@ -19,7 +21,7 @@
         </button>
         <button class="theme-toggle">
             <img src="https://api.iconify.design/eva/sun-fill.svg?color=lightgray&width=32&height=32" alt="Cooking Ideas">
-            <p class="nav-item">Light Theme</p>
+            <p class="nav-item">Theme</p>
         </button>
     </div>
     <script>
@@ -40,6 +42,8 @@
                 toggleButtonSrc(menu.children[i].children[0], oldVal, newVal);
                 if(i == menu.childElementCount-1){
                     toggleButtonSrc(menu.children[i].children[0], oldThemeVal, newThemeVal);
+                    newThemeVal = newThemeVal.charAt(0).toUpperCase() + newThemeVal.slice(1);
+                    menu.children[i].children[1].innerHTML = newThemeVal + "-Theme";
                 }
             }
         }
@@ -63,30 +67,6 @@
 
         const toggleTheme = () => {
             setTheme(document.body.classList.contains(darkThemeClass));
-        }
-
-
-        function toggleThemeButton(element){
-            let body = document.getElementById("body")
-            let menu = document.getElementsByClassName("menu-container")[0];
-            let i = 0;
-
-            if(hasClass(body, "dark-theme")){
-                for(; i < menu.childElementCount - 1; i++){
-                    menu.children[i].children[0].src = menu.children[i].children[0].src.replace("lightgray", "black");
-                }
-                element.children[0].src='https://api.iconify.design/bi/moon-fill.svg?color=black&width=32&height=32';
-                body.classList.toggle("dark-theme")
-                body.classList.toggle("light-theme")
-            } else {
-                for(; i < menu.childElementCount - 1; i++){
-                    menu.children[i].children[0].src = menu.children[i].children[0].src.replace("black", "lightgray");
-                }
-                element.children[0].src='https://api.iconify.design/eva/sun-fill.svg?color=lightgray&width=32&height=32';
-                body.classList.toggle("dark-theme")
-                body.classList.toggle("light-theme")
-            }
-
         }
 
         var button = document.getElementsByClassName("theme-toggle")[0];
