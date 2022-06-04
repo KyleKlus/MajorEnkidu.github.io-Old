@@ -30,13 +30,16 @@ header .back-button {
     border-radius: var(--radius-big);
     background-color: var(--bg);
     font-size: large;
-    transition: background-color 250ms ease-out;
+    transition: all 250ms ease-out;
 }
 
 .back-button:hover {
-    background-color: var(--main-accent-light);
+    background-color: var(--bg-darker);
+    transform: translateY(-1px);
     color: var(--text-normal);
-    transition: background-color 200ms ease-in;
+    cursor: pointer;
+    transition: background-color 200ms ease-in,
+                transform 200ms ease-in;
 }
 
 .menu-container {
@@ -72,6 +75,7 @@ header .menu-container > button.theme-toggle {
 
 header .menu-container > button.theme-toggle:hover {
     background-color: transparent;
+    cursor: pointer;
 }
 
 header .menu-container > button.theme-toggle > img:hover {
@@ -109,6 +113,7 @@ header .menu-container > button:hover {
     background-color: var(--main-accent-dark);
     color: var(--main-accent-dark);
     transition: all 200ms ease-in;
+    cursor: pointer;
 }
 
 header h1 {

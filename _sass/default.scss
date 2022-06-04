@@ -9,6 +9,15 @@
 
     font-family: 'Fira Code';
     font-weight: 300;
+
+}
+
+::-moz-selection {
+    background: var(--text-highlight-bg);
+}
+
+::selection {
+    background: var(--text-highlight-bg);
 }
 
 body {
