@@ -24,7 +24,7 @@ header .back-button-container {
 header a.back-button {
     margin-left: 1.2rem;
     text-decoration: none;
-    background-color: var(--main-accent);
+    background-color: var(--main-accent-dark);
     border: 1px solid transparent;
     border-radius: var(--radius-big);
     box-shadow: var(--button-shadow);
@@ -41,7 +41,7 @@ header a.back-button {
 .menu-container {
     display: flex;
     flex-direction: column;
-    width: calc(32px + 1.2rem);
+    width: calc(42px + 1.4em);
     max-height: 100vh;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -64,32 +64,32 @@ header a.back-button {
 }
 
 
-header .menu-container > a {
+header .menu-container > button {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
-    width: calc(100% - 2.5rem);
     font-size: var(--header-4-size);
+    background-color: transparent;
     border: none;
-    border-top-right-radius: var(--radius-small);
-    border-bottom-right-radius: var(--radius-small);
     transition: all 200ms ease-out;
 }
 
-header .menu-container > a > img{
+header .menu-container > button > img {
     margin: 0.6rem 0.6rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--button-shadow);
+    padding: 5px;
     border: 1px solid transparent;
-    border-radius: 16px;
+    border-radius: var(--radius-big);
+    background-color: var(--bg);
 }
 
-header .menu-container > a > p {
+header .menu-container > button > p {
     margin-right: 0.6rem;
     white-space: nowrap;
 }
 
-header .menu-container > a:hover {
+header .menu-container > button:hover {
     background-color: var(--main-accent-dark);
     color: var(--main-accent-dark);
     transition: all 200ms ease-in;
@@ -115,27 +115,27 @@ header .search-container {
         padding: 0;
         justify-content: center;
     }
-    
+
     .menu-container:hover{
         width: 100vw;
         transition: all 200ms ease-in;
     }
-    
-    header .menu-container > a > img:hover{
+
+    header .menu-container > button > img:hover{
         border-color: var(--main-accent);
         background-color: var(--main-accent);
         transition: all 200ms ease-in;
     }
-    
-    header .menu-container > a {
+
+    header .menu-container > button {
         width: fit-content;
     }
-    
-    header .menu-container > a > p {
+
+    header .menu-container > button > p {
         display: none;
     }
-    
-    header .menu-container > a:hover {
+
+    header .menu-container > button:hover {
         background-color: transparent;
         color: transparent;
         transition: all 200ms ease-in;

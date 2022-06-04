@@ -5,27 +5,99 @@
     <h1>{{ page.title | default: site.title }}</h1>
     <div class="search-container"></div>
     <div class="menu-container is-visible">
-        <a href="/index.html">
-            <img src="https://api.iconify.design/el/home-alt.svg?color=gray&width=32&height=32" alt="Home">
+        <button class="home" onclick="location.href = '/index.html'">
+            <img src="https://api.iconify.design/bx/home-alt.svg?color=lightgray&width=32&height=32" alt="Home">
             <p class="nav-item">Home</p>
-        </a>
-        <a href="/posts/recipes/Recipes.html">
-            <img src="https://api.iconify.design/file-icons/fork.svg?color=gray&width=32&height=32" alt="Recipes">
+        </b>
+        <button class="recipes" onclick="location.href = '/posts/recipes/Recipes.html'">
+            <img src="https://api.iconify.design/icon-park-solid/fork-spoon.svg?color=lightgray&width=32&height=32" alt="Recipes">
             <p class="nav-item">Recipes</p>
-        </a>
-        <a href="/posts/recipes/etc/Cooking-Ideas.html">
-            <img src="https://api.iconify.design/el/idea-alt.svg?color=gray&width=32&height=32" alt="Cooking Ideas">
+        </b>
+        <button class="cooking-idea" onclick="location.href = '/posts/recipes/etc/Cooking-Ideas.html'">
+            <img src="https://api.iconify.design/carbon/idea.svg?color=lightgray&width=32&height=32" alt="Cooking Ideas">
             <p class="nav-item">Cooking Ideas</p>
-        </a>
+        </button>
+        <button class="theme-toggle">
+            <img src="https://api.iconify.design/eva/sun-fill.svg?color=lightgray&width=32&height=32" alt="Cooking Ideas">
+            <p class="nav-item">Light Theme</p>
+        </button>
     </div>
     <script>
-        function toggleMenu(){
-            var element = document.querySelector(".menu-container");
-            element.classList.toggle("is-visible");
+        const darkThemeClass = 'dark-theme';
+        const lightThemeClass = 'light-theme';
+
+        function hasClass(element, className) {
+            return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
         }
 
-        function toggleButton(element){
-            element.classList.toggle("is-active");
+        function toggleButtonSrc(buttonImage, oldString, newString){
+            buttonImage.src = buttonImage.src.replace(oldString, newString);
         }
+
+        function toggleMenuSrc(menu, oldVal, newVal, oldThemeVal, newThemeVal) {
+            let i = 0;
+            for(; i < menu.childElementCount; i++){
+                toggleButtonSrc(menu.children[i].children[0], oldVal, newVal);
+                if(i == menu.childElementCount-1){
+                    toggleButtonSrc(menu.children[i].children[0], oldThemeVal, newThemeVal);
+                }
+            }
+        }
+
+        const setTheme = (theme) => {
+            localStorage.setItem('theme', theme ? 'light' : 'dark');
+
+            const menu = document.getElementsByClassName("menu-container")[0];
+
+            var i = 0;
+
+            if (!theme) {
+                toggleMenuSrc(menu, "black", "lightgray", "moon", "sun");
+            } else {
+                toggleMenuSrc(menu, "lightgray", "black", "sun", "moon");
+            }
+
+            document.body.classList.toggle(darkThemeClass, !theme);
+            document.body.classList.toggle(lightThemeClass, theme);
+        }
+
+        const toggleTheme = () => {
+            setTheme(document.body.classList.contains(darkThemeClass));
+        }
+
+
+        function toggleThemeButton(element){
+            let body = document.getElementById("body")
+            let menu = document.getElementsByClassName("menu-container")[0];
+            let i = 0;
+
+            if(hasClass(body, "dark-theme")){
+                for(; i < menu.childElementCount - 1; i++){
+                    menu.children[i].children[0].src = menu.children[i].children[0].src.replace("lightgray", "black");
+                }
+                element.children[0].src='https://api.iconify.design/bi/moon-fill.svg?color=black&width=32&height=32';
+                body.classList.toggle("dark-theme")
+                body.classList.toggle("light-theme")
+            } else {
+                for(; i < menu.childElementCount - 1; i++){
+                    menu.children[i].children[0].src = menu.children[i].children[0].src.replace("black", "lightgray");
+                }
+                element.children[0].src='https://api.iconify.design/eva/sun-fill.svg?color=lightgray&width=32&height=32';
+                body.classList.toggle("dark-theme")
+                body.classList.toggle("light-theme")
+            }
+
+        }
+
+        var button = document.getElementsByClassName("theme-toggle")[0];
+
+        button.addEventListener('click', toggleTheme);
+
+
+        console.log(localStorage.getItem('theme'));
+
+        (() => localStorage.getItem('theme') === 'dark' && setTheme(false))();
+        (() => localStorage.getItem('theme') === 'light' && setTheme(true))();
+
     </script>
 </header>
