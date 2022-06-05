@@ -49,6 +49,41 @@ body {
     line-height: 1.5rem;
 }
 
+.post ul, ol {
+    padding-left: 0;
+    width: 100%;
+}
+
+.post li {
+    margin:1.5rem 0;
+    width: 100%;
+}
+
+.post a {
+    width: calc(80%);
+    color: var(--text-normal);
+    background-color: var(--bg-darker);
+    border: none;
+    border-radius: var(--radius-big);
+    padding: 10px;
+    margin: 0;
+    align-self: center;
+    box-shadow: var(--button-shadow);
+    transition: all 200ms ease-out;
+}
+
+.post a:hover{
+    background-color: var(--bg-dark);
+    color: var(--main-accent-light);
+    transform: translateY(-1px);
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+
+.post ul > li::marker {
+    content: none;
+}
+
 @media only screen and (max-width: 600px) {
     .content {
         padding-left: 0.8rem;

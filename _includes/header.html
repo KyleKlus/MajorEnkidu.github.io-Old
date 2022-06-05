@@ -5,23 +5,23 @@
         </button>
     </div>
     <h1>{{ page.title | default: site.title }}</h1>
+    <button class="theme-toggle">
+        <img src="https://api.iconify.design/eva/sun-fill.svg?color=lightgray&width=24&height=24" alt="Cooking Ideas">
+        <p class="nav-item">Theme</p>
+    </button>
     <div class="search-container"></div>
     <div class="menu-container is-visible">
         <button class="home" onclick="location.href = '/index.html'">
-            <img src="https://api.iconify.design/bx/home-alt.svg?color=lightgray&width=32&height=32" alt="Home">
+            <img src="https://api.iconify.design/bx/home-alt.svg?color=lightgray&width=28&height=28" alt="Home">
             <p class="nav-item">Home</p>
         </b>
         <button class="recipes" onclick="location.href = '/posts/recipes/Recipes.html'">
-            <img src="https://api.iconify.design/icon-park-solid/fork-spoon.svg?color=lightgray&width=32&height=32" alt="Recipes">
+            <img src="https://api.iconify.design/icon-park-solid/fork-spoon.svg?color=lightgray&width=28&height=28" alt="Recipes">
             <p class="nav-item">Recipes</p>
         </b>
         <button class="cooking-idea" onclick="location.href = '/posts/recipes/etc/Cooking-Ideas.html'">
-            <img src="https://api.iconify.design/carbon/idea.svg?color=lightgray&width=32&height=32" alt="Cooking Ideas">
+            <img src="https://api.iconify.design/carbon/idea.svg?color=lightgray&width=28&height=28" alt="Cooking Ideas">
             <p class="nav-item">Cooking Ideas</p>
-        </button>
-        <button class="theme-toggle">
-            <img src="https://api.iconify.design/eva/sun-fill.svg?color=lightgray&width=32&height=32" alt="Cooking Ideas">
-            <p class="nav-item">Theme</p>
         </button>
     </div>
     <script>
@@ -40,12 +40,12 @@
             let i = 0;
             for(; i < menu.childElementCount; i++){
                 toggleButtonSrc(menu.children[i].children[0], oldVal, newVal);
-                if(i == menu.childElementCount-1){
-                    toggleButtonSrc(menu.children[i].children[0], oldThemeVal, newThemeVal);
-                    newThemeVal = newThemeVal.charAt(0).toUpperCase() + newThemeVal.slice(1);
-                    menu.children[i].children[1].innerHTML = newThemeVal + "-Theme";
-                }
             }
+            var themeButton = document.getElementsByClassName("theme-toggle")[0];
+            toggleButtonSrc(themeButton.children[0], oldThemeVal, newThemeVal);
+            toggleButtonSrc(themeButton.children[0], oldVal, newVal);
+            newThemeVal = newThemeVal.charAt(0).toUpperCase() + newThemeVal.slice(1);
+            themeButton.children[1].innerHTML = newThemeVal + "-Theme";
         }
 
         const setTheme = (theme) => {

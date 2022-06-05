@@ -22,18 +22,18 @@ header .back-button-container {
 }
 
 header .back-button {
-    margin-left: 0.6rem;
+    margin-left: 1rem;
     text-decoration: none;
     box-shadow: var(--button-shadow);
-    padding: 10px;
+    padding: 5px;
     border: 1px solid transparent;
-    border-radius: var(--radius-big);
+    border-radius: var(--radius-medium);
     background-color: var(--bg);
     font-size: large;
     transition: all 250ms ease-out;
 }
 
-.back-button:hover {
+header .back-button:hover {
     background-color: var(--bg-darker);
     transform: translateY(-1px);
     color: var(--text-normal);
@@ -45,7 +45,7 @@ header .back-button {
 .menu-container {
     display: flex;
     flex-direction: column;
-    width: calc(42px + 1.4em);
+    width: calc(28px + 0.6rem + 1.4em);
     max-height: 100vh;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -67,18 +67,41 @@ header .back-button {
     transition: width 300ms ease-in;
 }
 
-header .menu-container > button.theme-toggle {
+header > button.theme-toggle {
     position: absolute;
-    margin-bottom: 00.15rem;
-    bottom: 0;
+    right: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    font-size: var(--header-4-size);
+    background-color: transparent;
+    border: none;
+    transition: all 200ms ease-out;
+
 }
 
-header .menu-container > button.theme-toggle:hover {
+header > button.theme-toggle > p {
+    display: none;
+}
+
+header > button.theme-toggle:hover {
     background-color: transparent;
     cursor: pointer;
 }
 
-header .menu-container > button.theme-toggle > img:hover {
+header > button.theme-toggle > img {
+    box-shadow: var(--button-shadow);
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-medium);
+    background-color: var(--bg);
+    transition: all 200ms ease-out;
+}
+
+
+
+header > button.theme-toggle > img:hover {
     background-color: white;
     transition: all 200ms ease-in;
 }
