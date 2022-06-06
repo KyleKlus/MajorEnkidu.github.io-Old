@@ -17,10 +17,14 @@ title: Kyle Klus
     </div>
     <hr>
     <br><br>
-    <p>This is the Website of Kyle Klus.</p>
-    <p>Feel free to roam around and cook any of the recipes you find, for yourself.</p>
+    <p style="align-self: center;">Hi, I am Kyle Klus, a computer science student </p>
+    <p style="align-self: center;">with a love for creating things for myself and/or for others.</p>
     <br>
-    <p>- Kyle Klus</p>
+    <p style="align-self: center;">Feel free to roam around and have a look at my current projects and</p>
+    <p style="align-self: center;">maybe you'll find something interesting or even cook the recipes in my</p>
+    <p style="align-self: center;">cookbook yourself.</p>
+    <br>
+    <p style="align-self: center;">- Kyle Klus</p>
     <br><br>
     <style>
         .image-cropper {
@@ -28,7 +32,12 @@ title: Kyle Klus
             overflow: hidden;
             border-radius: 50%;
             box-shadow: var(--shadow);
-border: 1px solid var(--main-accent-dark);
+            border: 1px solid var(--main-accent-dark);
+            transition: all 200ms ease-out;
+        }
+        .image-cropper:hover {
+            transform: scale(1.02);
+            transition: all 200ms ease-in;
         }
         img.rounded{
             display: inline;
