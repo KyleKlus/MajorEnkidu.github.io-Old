@@ -1,6 +1,6 @@
 ---
 permalink: /
-layout: default
+layout: index
 title: Kyle Klus
 ---
 <div class="content" style="display:flex; flex-direction:column; ">
@@ -11,6 +11,7 @@ title: Kyle Klus
     </div>
     <br>
     <div style="align-self: center;">
+        <button class="portfolio-button" onclick="location.href = '/Kyles-Cookbook.html'">My Cookbook</button>
         <button class="portfolio-button" onclick="location.href = 'https://github.com/MajorEnkidu?tab=repositories'">Portfolio</button>
         <button class="portfolio-button" onclick="location.href = 'mailto:kyle.klus.work@pm.me'">Contact</button>
     </div>
