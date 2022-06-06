@@ -146,6 +146,22 @@ header h1 {
 }
 
 @media only screen and (max-width: 600px) {
+    header .menu-container > button:nth-child(1) > img {
+        padding: 8px;
+        border-radius: 50%;
+        border: 1px solid var(--main-accent);
+        margin-top: 0.3rem;
+
+    }
+
+    header .menu-container > button:nth-child(1) {
+        order: 1;
+    }
+
+    header .menu-container > button:nth-child(2) {
+        order: 2;
+    }
+
     header .hide-nav-container {
         display: flex;
         position: absolute;
