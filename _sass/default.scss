@@ -44,12 +44,14 @@ body {
 }
 
 .post {
+
     width: calc(80%);
     max-width: 870px;
     line-height: 1.5rem;
+
 }
 
-.post ul, ol {
+.post ul, .post ol {
     padding-left: 0;
     width: 100%;
 }
@@ -85,12 +87,24 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    .content {
-        padding-left: 0.8rem;
-        padding-right: 0.8rem;
+    .content, .post {
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+        max-width: unset;
+        
     }
 
-    .post {
-        width: 95%;
+    .post li::marker {
+        font-size: small;
+        position: absolute;
+        right: 0;
+    }
+
+    .post h2 {
+        font-size: 90%;
+    }
+
+    .post h3 {
+        font-size: 1.2rem;
     }
 }
