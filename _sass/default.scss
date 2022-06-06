@@ -51,30 +51,24 @@ body {
 
 }
 
-.post ul, .post ol {
+.post:not(.moc) ul, .post:not(.moc) ol {
     padding-left: 0;
     width: 100%;
 }
 
-.post li {
-    margin:1.5rem 0;
+.post.moc {
+    display: flex;
+    flex-direction: column;
+}
+
+.post.moc ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
     width: 100%;
 }
 
-.post a {
-    width: calc(80%);
-    color: var(--text-normal);
-    background-color: var(--bg-darker);
-    border: none;
-    border-radius: var(--radius-big);
-    padding: 10px;
-    margin: 0;
-    align-self: center;
-    box-shadow: var(--button-shadow);
-    transition: all 200ms ease-out;
-}
-
-.post a:hover{
+.post.moc li:hover{
     background-color: var(--bg-dark);
     color: var(--main-accent-light);
     transform: translateY(-1px);
@@ -82,8 +76,32 @@ body {
     cursor: pointer;
 }
 
+.post.moc li {
+    display: flex;
+    width: 75%;
+    align-self: center;
+    color: var(--text-normal);
+    background-color: var(--bg-darker);
+    border: none;
+    border-radius: var(--radius-big);
+    padding: 15px;
+    margin: 1rem 0;
+    box-shadow: var(--button-shadow);
+    justify-content: center;
+    transition: all 200ms ease-out;
+}
+
+.post.moc li a {
+    width: 100%;
+    line-height: 100%;
+    text-align: center;
+    border: none;
+    font-size: large;
+}
+
 .post ul > li::marker {
     content: none;
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -91,7 +109,7 @@ body {
         margin-left: 0.8rem;
         margin-right: 0.8rem;
         max-width: unset;
-        
+
     }
 
     .post li::marker {
