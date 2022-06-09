@@ -15,6 +15,14 @@ title: Kyle Klus
         <button class="portfolio-button" onclick="location.href = 'https://github.com/MajorEnkidu?tab=repositories'">Portfolio</button>
         <button class="portfolio-button" onclick="location.href = 'mailto:kyle.klus.work@pm.me'">Contact</button>
     </div>
+    <div style="align-self: center;">
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+        <script type='text/javascript'>
+            kofiwidget2.init('Support Me on Ko-fi', '#bd3131', 'W7W1D5JTZ');
+            kofiwidget2.draw();
+        </script>
+    </div>
+    <br>
     <hr>
     <br><br>
     <p style="align-self: center;">Hi, I am Kyle Klus, a computer science student </p>
@@ -57,7 +65,13 @@ title: Kyle Klus
             box-shadow: var(--button-shadow);
             transition: all 200ms ease-out;
         }
-        .portfolio-button:hover{
+        .btn-container{
+            border-radius: 8px;
+            box-shadow: var(--button-shadow);
+            transition: all 200ms ease-out;
+        }
+        .portfolio-button:hover,
+        .btn-container:hover {
             background-color: var(--bg-dark);
             transform: translateY(-1px);
             transition: all 200ms ease-in;
