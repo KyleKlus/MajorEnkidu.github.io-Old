@@ -1,18 +1,20 @@
-:root .dark-theme{
-    --main-accent-dark: #4d1919;
-    --main-accent: #993333;
-    --main-accent-light: #c24747;
+:root .dark-theme {
+    --main-accent-dark: hsl(0, 61%, 20%);
+    --main-accent: hsl(0, 61%, 40%);
+    --main-accent-light: hsl(0, 61%, 52%);
 
-    --bg: #151c1e;
-    --bg-dark: hsl(210, 15%, 15%);
-    --bg-darker: hsl(200, 14%, 13%);
+    --bg: hsl(205, 18%, 16%);
+    --bg-dark: hsl(202, 18%, 13%);
+    --bg-darker: hsl(199, 18%, 10%);
+    --bg-darkest: hsl(196, 18%, 7%);
+    --bg-black: hsl(193, 18%, 4%);
 
     --header-1-color: hsl(230, 20%, 92%);
     --header-2-color: hsl(230, 20%, 92%);
     --header-3-color: hsl(230, 20%, 92%);
-    --header-4-color: hsl(230, 20%, 88%);
-    --header-5-color: hsl(230, 20%, 88%);
-    --header-6-color: hsl(230, 20%, 88%);
+    --header-4-color: hsl(230, 20%, 86%);
+    --header-5-color: hsl(230, 20%, 86%);
+    --header-6-color: hsl(230, 20%, 86%);
 
     --bg-highlight-color:#afe400;
     --highlight-text-color:#000000;
@@ -49,14 +51,16 @@
     --indentation-guide-active: var(--main-accent-light);
 }
 
-:root .light-theme{
-    --main-accent-dark: hsl(0, 50%, 40%);
-    --main-accent: hsl(0, 51%, 20%);
-    --main-accent-light: hsl(0, 50%, 52%);
+:root .light-theme {
+    --main-accent-dark: hsl(0, 60%, 40%);
+    --main-accent: hsl(0, 61%, 20%);
+    --main-accent-light: hsl(0, 60%, 52%);
 
-    --bg: hsl(195, 16%, 84%);
-    --bg-dark: hsl(210, 14%, 98%);
-    --bg-darker: hsl(200, 14%, 90%);
+    --bg: hsl(205, 18%, 98%);
+    --bg-dark: hsl(202, 18%, 95%);
+    --bg-darker: hsl(199, 18%, 89%);
+    --bg-darkest: hsl(196, 18%, 83%);
+    --bg-black: hsl(193, 18%, 79%);
 
     --header-1-color: hsl(230, 20%, 4%);
     --header-2-color: hsl(230, 20%, 4%);

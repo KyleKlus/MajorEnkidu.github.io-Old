@@ -27,7 +27,7 @@ header .back-button {
     padding: 5px;
     border: 1px solid transparent;
     border-radius: var(--radius-medium);
-    background-color: var(--bg);
+    background-color: var(--bg-darkest);
     font-size: large;
     transition: all 250ms ease-out;
 }
@@ -87,9 +87,17 @@ header button.theme-toggle {
     transition: all 200ms ease-out;
 }
 
-header > button.theme-toggle:hover {
-    background-color: transparent;
+header button:hover.theme-toggle {
+    background-color: var(--bg-dark);
     cursor: pointer;
+    transform: translateY(-1px);
+    transition: all 200ms ease-in;
+}
+
+header button:hover.theme-toggle {
+    cursor: pointer;
+    transform: translateY(-1px);
+    transition: all 200ms ease-in;
 }
 
 header button.theme-toggle > img {
@@ -97,12 +105,12 @@ header button.theme-toggle > img {
     padding: 5px;
     border: 1px solid transparent;
     border-radius: var(--radius-medium);
-    background-color: var(--bg);
+    background-color: var(--bg-darkest);
     transition: all 200ms ease-out;
 }
 
-header > button.theme-toggle > img:hover {
-    background-color: white;
+header button:hover.theme-toggle > img {
+    background-color: var(--bg-darker);
     transition: all 200ms ease-in;
 }
 
@@ -123,8 +131,13 @@ header .menu-container > button > img {
     padding: 5px;
     border: 1px solid transparent;
     border-radius: var(--radius-big);
-    background-color: var(--bg);
+    background-color: var(--bg-darkest);
     transition: all 200ms ease-out;
+}
+
+header .menu-container > button:hover > img {
+    background-color: var(--bg-dark);
+    transition: background-color 200ms ease-out;
 }
 
 header .menu-container > button > p {
@@ -220,7 +233,6 @@ header h1 {
     header .menu-container > button.theme-toggle {
         position: absolute;
         right: 0;
-
     }
 
     header .menu-container > button.theme-toggle > img {
@@ -228,7 +240,7 @@ header h1 {
     }
 
     header .menu-container > button.theme-toggle > img:hover {
-        background-color: var(--bg);
+        background-color: var(--bg-darkest);
         border-color: transparent;
         transition: all 200ms ease-in;
     }
