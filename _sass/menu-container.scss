@@ -12,7 +12,7 @@
     left: 0;
     bottom: 0;
     z-index: 2;
-    background-color: var(--bg-dark);
+    background-color: var(--bg-darker);
     transition: width 300ms ease-out;
     box-shadow: var(--shadow);
     justify-items: center;
@@ -40,12 +40,12 @@ header .menu-container > button > img {
     padding: 5px;
     border: 1px solid transparent;
     border-radius: var(--radius-big);
-    background-color: var(--bg-darkest);
+    background-color: var(--bg-black);
     transition: all 200ms ease-out;
 }
 
 header .menu-container > button:hover > img {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-darker);
     transition: background-color 200ms ease-out;
 }
 
@@ -61,13 +61,17 @@ header .menu-container > button:hover {
     cursor: pointer;
 }
 
+body.light-theme header .menu-container {
+    background-color: var(--bg-dark);
+}
+
+
 @media only screen and (max-width: 600px) {
     header .menu-container > button:nth-child(1) > img {
         padding: 8px;
         border-radius: 50%;
         border: 1px solid var(--main-accent);
         margin-top: 0.3rem;
-
     }
 
     header .menu-container > button:nth-child(1) {

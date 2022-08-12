@@ -67,7 +67,7 @@ body {
 }
 
 .post.moc li:hover{
-    background-color: var(--bg-dark);
+    background-color: var(--bg);
     color: var(--main-accent-light);
     transform: translateY(-1px);
     transition: all 200ms ease-in;
@@ -79,7 +79,7 @@ body {
     width: 60%;
     align-self: center;
     color: var(--text-normal);
-    background-color: var(--bg-darker);
+    background-color: var(--bg-dark);
     border: none;
     border-radius: var(--radius-big);
     margin: 1rem 0;
@@ -104,10 +104,8 @@ body {
 
 @media only screen and (max-width: 600px) {
     .content, .post {
-        margin-left: 0.8rem;
-        margin-right: 0.8rem;
+        width: 80%;
         max-width: unset;
-
     }
 
     .post li::marker {
