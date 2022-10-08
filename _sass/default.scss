@@ -88,13 +88,17 @@ body {
     transition: all 200ms ease-out;
 }
 
-.post.moc li a {
+.post.moc li p,
+.post.moc li > a{
     width: 100%;
     line-height: 100%;
     text-align: center;
-    border: none;
     font-size: large;
     padding: 15px;
+}
+
+.post.moc li a {
+    border: none;
 }
 
 .post.moc ul > li::marker {

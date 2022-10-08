@@ -1,0 +1,56 @@
+<div class="theme-toggle-container">
+    <button class="theme-toggle">
+        <img src="https://api.iconify.design/eva/sun-fill.svg?color=lightgray&width=24&height=24" alt="">
+    </button>
+</div>
+<script>
+    const darkThemeClass = 'dark-theme';
+    const lightThemeClass = 'light-theme';
+
+    function hasClass(element, className) {
+        return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+    }
+
+    function toggleButtonSrc(buttonImage, oldString, newString){
+        buttonImage.src = buttonImage.src.replace(oldString, newString);
+    }
+
+    function toggleMenuSrc(menu, oldVal, newVal, oldThemeVal, newThemeVal) {
+        let i = 0;
+        for(; i < menu.childElementCount; i++){
+            toggleButtonSrc(menu.children[i].children[0], oldVal, newVal);
+        }
+        var themeButton = document.getElementsByClassName("theme-toggle")[0];
+        toggleButtonSrc(themeButton.children[0], oldThemeVal, newThemeVal);
+        toggleButtonSrc(themeButton.children[0], oldVal, newVal);
+    }
+
+    const setTheme = (theme) => {
+        localStorage.setItem('theme', theme ? 'light' : 'dark');
+
+        const menu = document.getElementsByClassName("menu-container")[0];
+
+        var i = 0;
+
+        if (!theme) {
+            toggleMenuSrc(menu, "black", "lightgray", "moon", "sun");
+        } else {
+            toggleMenuSrc(menu, "lightgray", "black", "sun", "moon");
+        }
+
+        document.body.classList.toggle(darkThemeClass, !theme);
+        document.body.classList.toggle(lightThemeClass, theme);
+    }
+
+    const toggleTheme = () => {
+        setTheme(document.body.classList.contains(darkThemeClass));
+    }
+
+    var button = document.getElementsByClassName("theme-toggle")[0];
+
+    button.addEventListener('click', toggleTheme);
+
+    (() => localStorage.getItem('theme') === 'dark' && setTheme(false))();
+    (() => localStorage.getItem('theme') === 'light' && setTheme(true))();
+
+</script>
