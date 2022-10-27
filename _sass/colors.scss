@@ -3,11 +3,13 @@
     --main-accent: hsl(0, 61%, 40%);
     --main-accent-light: hsl(0, 61%, 52%);
 
-    --bg: #212a30;
-    --bg-dark: #1b2327;
-    --bg-darker: #151b1e;
-    --bg-darkest: #0f1315;
-    --bg-black: #080b0c;
+    --bg-offset: 4%;
+
+    --bg: hsl(204, 19%, calc(16% + var(--bg-offset)));
+    --bg-dark: hsl(200, 18%, calc(13% + var(--bg-offset)));
+    --bg-darker: hsl(200, 18%, calc(10% + var(--bg-offset)));
+    --bg-darkest: hsl(200, 17%, calc(7% + var(--bg-offset)));
+    --bg-black: hsl(195, 20%, calc(4% + var(--bg-offset)));
 
     --header-1-color: hsl(230, 20%, 92%);
     --header-2-color: hsl(230, 20%, 92%);
