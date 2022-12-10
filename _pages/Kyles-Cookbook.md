@@ -25,7 +25,7 @@ aliases:
 {% assign mocs_baking = site.categories.baking | where: "categories", "moc" %}
 {% if mocs_baking != blank %}
 
-## Backing
+## Baking
 
 {% for post in mocs_baking %}
 
